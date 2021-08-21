@@ -16,12 +16,15 @@ class Post
 
     public $body;
 
-    public function __construct($title,$excerpt,$date,$body)
+    public $slug;
+
+    public function __construct($title,$excerpt,$date,$body, $slug)
     {
         $this->title = $title;
         $this->body = $body;
         $this->date = $date;
         $this->excerpt = $excerpt;
+        $this->slug = $slug;
     }
 
     public static function find($slug) {
