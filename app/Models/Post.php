@@ -32,14 +32,27 @@ class Post
             return static::all()->firstWhere( 'slug', $slug );
     }
 
-    public static function all() {
+    public static function findOrFail($slug) {
 
+            $post = static::find($slug);
+
+            if(!$post){
+              throw new ModelNotFoundException();
+            }
+
+            return $post;
+    }
+
+    public static function all()
+    {
+
+      return cache()->rememberForever('posts.all', function ()
+      {
         return collect(File::files(resource_path("posts/")))
           ->map(/**
            * @param $file
            * @return \Spatie\YamlFrontMatter\Document
            */ fn($file) => \Spatie\YamlFrontMatter\YamlFrontMatter::parseFile($file))
-
           ->map(/**
            * @param $document
            * @return Post
@@ -49,7 +62,8 @@ class Post
             $document->date,
             $document->body(),
             $document->slug
-          ));
+          ))
+          ->sortByDesc('date');
+      });
     }
-
 }
