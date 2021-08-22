@@ -5,7 +5,5 @@
           {!!$post->body!!}
         </div>
 
-    </article>
-
     <a href="/">back</a>
 </x-layout>
