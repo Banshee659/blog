@@ -6,6 +6,11 @@
 <?php $component->withAttributes([]); ?>
     <article>
         <h1><?php echo e($post->title); ?>  </h1>
+
+        <p>
+            <a href="#"> <?php echo e($post->category->name); ?></a>
+        </p>
+        
         <div>
           <?php echo $post->body; ?>
 
