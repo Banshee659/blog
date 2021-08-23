@@ -12,6 +12,9 @@
 
                 </a>
             </h1>
+            <p>
+                <a href="#"> <?php echo e($post->category->name); ?></a>
+            </p>
             <div><?php echo e($post->excerpt); ?>  </div>
 
         </article>
