@@ -7,7 +7,7 @@
     <?php $__currentLoopData = $posts; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $post): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
         <article class="<?php echo e($loop->even ? 'fool' : 'mb-6'); ?>">
             <h1>
-                <a href="/posts/<?php echo e($post->id); ?>">
+                <a href="/posts/<?php echo e($post->slug); ?>">
                     <?php echo e($post->title); ?>
 
                 </a>
