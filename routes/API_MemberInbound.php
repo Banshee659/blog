@@ -440,7 +440,7 @@ function put_member($data)
 
                     if(isset($requireRegoField['postcode']) && !isset($data['addressPostCode']))
                     {
-                        deliver_response('json', 1, array('error' => 'Missing field: Post code'));
+                        deliver_response('json', 1, array('error' => 'Missing field: PostBackup code'));
                     }
 
                     if(isset($requireRegoField['state']) && !isset($data['addressState']))
@@ -566,7 +566,7 @@ function put_member($data)
                 }
 
                 if (isset($requireRegoField['postcode']) && !isset($data['addressPostCode'])) {
-                    deliver_response('json', 9, array('error' => 'Missing field: Post code'));
+                    deliver_response('json', 9, array('error' => 'Missing field: PostBackup code'));
                 }
 
                 if (isset($requireRegoField['state']) && !isset($data['addressState'])) {
@@ -645,7 +645,7 @@ function put_member($data)
                             $gender = $query->getResult($qFind, $f, 'gender');
 
                             if (isset($seen[$parentBodyID]) === false) {
-                                $users[] = array('National Member ID' => $parentBodyID, 'Post code' => $addressPostCode, 'State' => $addressState, 'Gender identity' => $gender, 'Organisations' => $seenC[$parentBodyID], 'Status' => 'existing');
+                                $users[] = array('National Member ID' => $parentBodyID, 'PostBackup code' => $addressPostCode, 'State' => $addressState, 'Gender identity' => $gender, 'Organisations' => $seenC[$parentBodyID], 'Status' => 'existing');
                             }
                             $seen[$parentBodyID] = true;
                         }
@@ -679,7 +679,7 @@ function put_member($data)
                             $gender = $query->getResult($qFind2, $f, 'gender');
 
                             if (isset($seen[$parentBodyID]) === false) {
-                                $users[] = array('National Member ID' => $parentBodyID, 'Post code' => $addressPostCode, 'State' => $addressState, 'Gender identity' => $gender, 'Organisations' => [$clientName], 'status' => 'pending');
+                                $users[] = array('National Member ID' => $parentBodyID, 'PostBackup code' => $addressPostCode, 'State' => $addressState, 'Gender identity' => $gender, 'Organisations' => [$clientName], 'status' => 'pending');
                             }
                             $seen[$parentBodyID] = true;
                         }
