@@ -13,7 +13,7 @@
                 </a>
             </h1>
             <p>
-                <a href="#"> <?php echo e($post->category->name); ?></a>
+                <a href="/categories/<?php echo e($post->category->slug); ?>"> <?php echo e($post->category->name); ?></a>
             </p>
             <div><?php echo e($post->excerpt); ?>  </div>
 
