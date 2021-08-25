@@ -1,11 +1,11 @@
 <?php return array(
     'root' => array(
-        'pretty_version' => '1.0.0+no-version-set',
-        'version' => '1.0.0.0',
+        'pretty_version' => 'dev-main',
+        'version' => 'dev-main',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => NULL,
+        'reference' => '168ed0dbcb7b64d8301b9cb30b8d35d383b98777',
         'name' => 'laravel/laravel',
         'dev' => true,
     ),
@@ -26,6 +26,15 @@
             'install_path' => __DIR__ . '/../brick/math',
             'aliases' => array(),
             'reference' => 'dff976c2f3487d42c1db75a3b180e2b9f0e72ce0',
+            'dev_requirement' => false,
+        ),
+        'ccxt/ccxt' => array(
+            'pretty_version' => '1.55.42',
+            'version' => '1.55.42.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../ccxt/ccxt',
+            'aliases' => array(),
+            'reference' => 'e4ad83148d37878026ec2b738260224e00509416',
             'dev_requirement' => false,
         ),
         'cordoval/hamcrest-php' => array(
@@ -395,12 +404,12 @@
             'dev_requirement' => false,
         ),
         'laravel/laravel' => array(
-            'pretty_version' => '1.0.0+no-version-set',
-            'version' => '1.0.0.0',
+            'pretty_version' => 'dev-main',
+            'version' => 'dev-main',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => NULL,
+            'reference' => '168ed0dbcb7b64d8301b9cb30b8d35d383b98777',
             'dev_requirement' => false,
         ),
         'laravel/sail' => array(
@@ -518,6 +527,15 @@
             'install_path' => __DIR__ . '/../opis/closure',
             'aliases' => array(),
             'reference' => '06e2ebd25f2869e54a306dda991f7db58066f7f6',
+            'dev_requirement' => false,
+        ),
+        'pear/console_table' => array(
+            'pretty_version' => 'v1.3.1',
+            'version' => '1.3.1.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../pear/console_table',
+            'aliases' => array(),
+            'reference' => '1930c11897ca61fd24b95f2f785e99e0f36dcdea',
             'dev_requirement' => false,
         ),
         'phar-io/manifest' => array(
