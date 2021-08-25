@@ -18,7 +18,7 @@ Route::get('/', function () {
 
     //ddd($posts);
 
-    return view ('posts', ['posts' => Post::all()]);
+    return view ('posts', ['posts' => Post::with('category')->get()]);
 });
 
 Route::get('posts/{post:slug}', function (Post $post) {
