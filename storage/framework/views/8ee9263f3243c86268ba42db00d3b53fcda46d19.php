@@ -8,7 +8,7 @@
         <h1><?php echo e($post->title); ?>  </h1>
 
         <p>
-            <a href="/categories/<?php echo e($post->category->slug); ?>"> <?php echo e($post->category->name); ?></a>
+            By <a href="/authors/<?php echo e($post->author->username); ?>"><?php echo e($post->author->name); ?></a> in <a href="/categories/<?php echo e($post->category->slug); ?>"> <?php echo e($post->category->name); ?></a>
         </p>
 
         <div>

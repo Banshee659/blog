@@ -18,7 +18,9 @@ Route::get('/', function () {
 
     //ddd($posts);
 
-    return view ('posts', ['posts' => Post::with('category')->get()]);
+    return view ('posts', [
+      'posts' => Post::latest('published_at')->get()
+    ]);
 });
 
 Route::get('posts/{post:slug}', function (Post $post) {
@@ -33,6 +35,14 @@ Route::get('categories/{category:slug}', function (\App\Models\Category $categor
 
     return view('posts', [
        'posts' => $category->posts
+    ]);
+
+});
+
+Route::get('authors/{author:username}', function (\App\Models\User $author) {
+
+    return view('posts', [
+       'posts' => $author->posts
     ]);
 
 });
